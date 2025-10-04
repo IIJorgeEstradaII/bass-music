@@ -1,3 +1,18 @@
+<% @albums.each do |album|%>
+  <% if album == @album %>
+    <div class="col-md-3">
+      <%= link_to(album) do %>
+        <div class="thumbnail">
+          <img src="<%= album.cover %>">
+          <div class="caption">
+            <h3 class="title"> <%= album.title %> </h3>
+            <p class="artist"> <%= album.artist %> </p>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+<% end %>
 
 <div class="show row">
   <div class="cover col-md-4">  </div>
@@ -12,6 +27,6 @@
         <div class="minutes col-md-4"> <%= track.minutes %> min</div>
       </div>
     <% end %>
-    
+    <%= link_to "Menu", albums_path%>
   </div>
 </div>
