@@ -1,9 +1,7 @@
 <div class="row">
   
-  <!--
-  TODO: Loop through each album and display each one with this HTML
-  -->
-<% @albums.each do |album| %>
+  
+<% @albums.each do |album|%>
   <div class="col-md-3">
     <%= link_to(album) do %>
       <div class="thumbnail">
@@ -16,6 +14,7 @@
     <% end %>
   </div>
   <% end %>
+  
 </div>
 
 
